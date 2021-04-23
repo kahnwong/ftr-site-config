@@ -54,3 +54,6 @@ Marco, Instapaper's creator, graciously opened up the database of contributions 
 ### Testing site config files
 
 Currently you will have to have a copy of Full-Text RSS to test changes to the site config files. In the future we will try to make this process easier.
+
+## References
+- https://help.fivefilters.org/full-text-rss/site-patterns.html#pattern-format
