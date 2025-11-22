@@ -29,9 +29,14 @@ strip: //*[contains(@class, 'comments')]
 
 # Remove "Article réservé aux abonnés"
 strip: //p[@class='article__status']
+strip: //p[@class='ds-article-status ds-article-status--premium']
 
 # Remove "Lecture restreinte Votre abonnement n’autorise pas la lecture de cet article"
 strip: //section[@id='js-capping-old-article']
+
+# Remove "Le titulaire de votre abonnement a mis en pause son abonnement"
+strip_id_or_class: lmd-banners
+strip_id_or_class: js-lmd-banners
 
 # Remove quotes highlighted in articles, doublons with content
 # We use parent::blockquote to avoid a remaining empty blockquote node
@@ -67,7 +72,7 @@ login_uri: https://secure.lemonde.fr/sfuser/connexion
 login_username_field: email
 login_password_field: password
 
-login_extra_fields: connection[_token]=@=xpath("//form//input[@id='connection__token']", request_html(config.getLoginUri()))
+login_extra_fields: csrf=@=xpath("//form//input[@id='csrf']", request_html(config.getLoginUri()))
 
 not_logged_in_xpath: //section[contains(concat(' ',normalize-space(@class),' '),' paywall__container ')]//p[@class='paywall__login']
 
