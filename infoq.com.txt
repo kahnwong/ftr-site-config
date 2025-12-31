@@ -12,3 +12,6 @@ strip_id_or_class: comments
 strip_id_or_class: forum-list-tree
 strip: //div[@class="addthis_toolbox addthis_default_style"]
 test_url: http://www.infoq.com/interviews/oleg-zhurakousky-javaone2011-interview
+strip_id_or_class: article__actions
+strip_id_or_class: crumbs
+strip_id_or_class: metadata
