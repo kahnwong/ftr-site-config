@@ -36,6 +36,7 @@ strip: //div[@class='earthbox']
 strip: //aside[@role="complementary"]
 strip: //p[contains(@id, 'injected-recirculation-link')]
 strip: //div[contains(@class, 'ArticleAudio_')]
+strip: //div[contains(@class, 'ArticleWell_root')]
 
 native_ad_clue: //meta[@property="og:url" and contains(@content, '/sponsored/')]
 
